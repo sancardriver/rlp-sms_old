@@ -14,11 +14,18 @@
 
 
 const form = document.querySelector('form');
-var rm = document.querySelector('#form-input-rm')
-var zlb = document.querySelector('#form-select-zlb')
+var rm = document.querySelector('#form-input-rm');
+var zlb = document.querySelector('#form-select-zlb');
+var dia = document.querySelector('#form-input-dia');
+var sex = document.querySelector('#form-select-sex');
+var age = document.querySelector('#form-input-age');
+var iso = document.querySelector('#form-select-iso');
+var kg = document.querySelector('#form-input-kg');
+var mon = document.querySelector('#form-select-mon');
+var ank = document.querySelector('#form-input-ank');
 
 form.addEventListener('change', function() {
-    form.action = "sms://&body=" + encodeURIComponent("RM: " + rm.value + "\nZLB: " + zlb.value);
+    form.action = "sms://&body=" + encodeURIComponent("RM: " + rm.value + "\nZLB: " + zlb.value + "\nDia: " + dia.value);
 });
 
 
