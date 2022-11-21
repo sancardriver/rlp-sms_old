@@ -1,6 +1,6 @@
 {
-  "short_name": "",
-  "name": "",
+  "short_name": "RLP SMS",
+  "name": "RLP SMS Anmeldung",
   "icons": [{
     "src": "icon.png",
     "type": "image/png",
