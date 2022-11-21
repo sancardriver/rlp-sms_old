@@ -24,104 +24,104 @@
 
 <body>
   <img src="/img/rlp-sms.png" width="100%" height="auto">
-  <div class="container">
-    <form class="form-floating needs-validation" novalidate>
-      <div class="row g-2">
-        <div class="col-md">
-          <div class="form-floating">
-            <input type="input" class="form-control" id="form-input-rm" placeholder="Rettungsmittel (z.B.: MZ 99/83-01)" required>
-            <label for="form-input-rm">Rettungsmittel (z.B.: MZ 99/83-01)</label>
-            <div class="invalid-feedback">
-              Bitte Funkrufnamen angeben!
+  <div class="container my-5">
+    <div class="row p-5 align-items-center rounded-3 border shadow-lg">
+      <form class="form-floating needs-validation" novalidate>
+        <div class="row g-2">
+          <div class="col-md">
+            <div class="form-floating">
+              <input type="input" class="form-control" id="form-input-rm"
+                placeholder="Rettungsmittel (z.B.: MZ 99/83-01)" required>
+              <label for="form-input-rm">Rettungsmittel (z.B.: MZ 99/83-01)</label>
+              <div class="invalid-feedback">
+                Bitte Funkrufnamen angeben!
+              </div>
+
             </div>
-        
           </div>
-        </div>
-        <div class="col-md">
+          <div class="col-md">
+            <div class="form-floating">
+              <select class="form-select" id="form-select-zlb" aria-label="Auswahl treffen!" placeholder="ZLB Status">
+                <option selected>Zuweisung wählen!</option>
+                <option value="Grün">Grün</option>
+                <option value="Zwangszuweisung">Zwangseingewiesen</option>
+              </select>
+              <label for="form-select-zlb">ZLB Status</label>
+            </div>
+          </div>
           <div class="form-floating">
-            <select class="form-select" id="form-select-zlb" aria-label="Auswahl treffen!" placeholder="ZLB Status">
-              <option selected>Zuweisung wählen!</option>
-              <option value="Grün">Grün</option>
-              <option value="Zwangszuweisung">Zwangseingewiesen</option>
+            <input type="input" class="form-control" id="form-input-dia" placeholder="Diagnose" required>
+            <label for="form-input-dia">Diagnose</label>
+            <div class="invalid-feedback">
+              Bitte Diagnose oder Symptom eingeben!
+            </div>
+          </div>
+          <div class="form-floating">
+            <select class="form-select" id="form-select-sex" aria-label="Geschlecht wählen"
+              placeholder="Geschlecht wählen">
+              <option selected>Geschlecht wählen!</option>
+              <option value="d">Divers</option>
+              <option value="w">Weiblich</option>
+              <option value="m">Männlich</option>
             </select>
-            <label for="form-select-zlb">ZLB Status</label>
+            <label for="form-select-sex">Geschlecht</label>
           </div>
-        </div>
-        <div class="form-floating">
-          <input type="input" class="form-control" id="form-input-dia" placeholder="Diagnose" required>
-          <label for="form-input-dia">Diagnose</label>
-          <div class="invalid-feedback">
-            Bitte Diagnose oder Symptom eingeben!
-          </div>
-        </div>
-        <div class="form-floating">
-          <select class="form-select" id="form-select-sex" aria-label="Geschlecht wählen" placeholder="Geschlecht wählen">
-            <option selected>Geschlecht wählen!</option>
-            <option value="d">Divers</option>
-            <option value="w">Weiblich</option>
-            <option value="m">Männlich</option>
-          </select>
-          <label for="form-select-sex">Geschlecht</label>
-        </div>
-        <div class="input-group">
-          <div class="form-floating">
-            <input type="number" class="form-control" id="form-input-age" placeholder="Alter angeben" required>
-            <label for="form-input-age">Alter</label>
-            <div class="invalid-feedback">
-              Bitte Alter bzw. ungefähres Alter angeben!
+          <div class="input-group">
+            <div class="form-floating">
+              <input type="number" class="form-control" id="form-input-age" placeholder="Alter angeben" required>
+              <label for="form-input-age">Alter</label>
+              <div class="invalid-feedback">
+                Bitte Alter bzw. ungefähres Alter angeben!
+              </div>
             </div>
+            <span class="input-group-text">Jahre</span>
           </div>
-          <span class="input-group-text">Jahre</span>
-        </div>
-        <div class="form-floating">
-          <select class="form-select" id="form-select-iso" aria-label="Isolationspflichtig" placeholder="Isolationspflicht">
-            <option selected>Isolationspflicht wählen!</option>
-            <option value="">Nein</option>
-            <option value="">Ja</option>
-            <option value="">Unklar</option>
-          </select>
-          <label for="form-select-iso">Isolationspflichtig</label>
-        </div>
-        <div class="input-group">
           <div class="form-floating">
-            <input type="number" class="form-control" id="form-input-kg" placeholder="Gewicht" required>
-            <label for="form-input-kg">Gewicht</label>
-            <div class="invalid-feedback">
-              Bitte Gewicht bzw. ungefähres Gewicht angeben!
-            </div>
+            <select class="form-select" id="form-select-iso" aria-label="Isolationspflichtig"
+              placeholder="Isolationspflicht">
+              <option selected>Isolationspflicht wählen!</option>
+              <option value="">Nein</option>
+              <option value="">Ja</option>
+              <option value="">Unklar</option>
+            </select>
+            <label for="form-select-iso">Isolationspflichtig</label>
           </div>
-          <span class="input-group-text">kg</span>
-        </div>
-        <div class="form-floating">
-          <select class="form-select" id="form-select-mon">
-            <option selected>Besteht eine mögliche Monitorpflicht?</option>
-            <option value="nein">Nein</option>
-            <option value="ja">Ja</option>
-            <option value="unklar">Unklar</option>
-          </select>
-          <label for="form-select-mon">Monitorpflichtig</label>
-        </div>
-        <div class="input-group">
+          <div class="input-group">
+            <div class="form-floating">
+              <input type="number" class="form-control" id="form-input-kg" placeholder="Gewicht" required>
+              <label for="form-input-kg">Gewicht</label>
+              <div class="invalid-feedback">
+                Bitte Gewicht bzw. ungefähres Gewicht angeben!
+              </div>
+            </div>
+            <span class="input-group-text">kg</span>
+          </div>
           <div class="form-floating">
-            <input type="text" class="form-control" id="form-input-ank" placeholder="Ankunft" required>
-            <label for="form-input-ank">Ankunft</label>
-            <div class="invalid-feedback">
-              Bitte ungefähre Ankunftsuhrzeit angeben!
-            </div>
+            <select class="form-select" id="form-select-mon">
+              <option selected>Besteht eine mögliche Monitorpflicht?</option>
+              <option value="nein">Nein</option>
+              <option value="ja">Ja</option>
+              <option value="unklar">Unklar</option>
+            </select>
+            <label for="form-select-mon">Monitorpflichtig</label>
           </div>
-          <span class="input-group-text">Uhr</span>
+          <div class="input-group">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="form-input-ank" placeholder="Ankunft" required>
+              <label for="form-input-ank">Ankunft</label>
+              <div class="invalid-feedback">
+                Bitte ungefähre Ankunftsuhrzeit angeben!
+              </div>
+            </div>
+            <span class="input-group-text">Uhr</span>
+          </div>
+          <div class="px-5 d-grid gap-2">
+            <button type="submit" class="btn btn-success" type="button">SMS absenden</button>
+            <button type="reset" class="btn btn-warning" type="button">Zurücksetzten</button>
+          </div>
         </div>
-        <div class="px-5 d-grid gap-2">
-          <button type="submit" class="btn btn-success" type="button">SMS absenden</button>
-          <button type="reset" class="btn btn-warning" type="button">Zurücksetzten</button>
-        </div>
-      </div>
-
-
-
-
-
-    </form>
+      </form>
+    </div>
   </div>
   <script src="js/vendor/bootstrap-5.2.2.min.js"></script>
   <script src="js/main.js"></script>
