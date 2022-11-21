@@ -25,7 +25,7 @@ var mon = document.querySelector('#form-select-mon');
 var ank = document.querySelector('#form-input-ank');
 
 form.addEventListener('change', function() {
-    form.action = "sms://&body=" + encodeURIComponent("RM: " + rm.value + "\nZLB: " + zlb.value + "\nDia: " + dia.value);
+    form.action = "sms://&body=" + encodeURIComponent("RM: " + rm.value + "\nZLB: " + zlb.value + "\nDia: " + dia.value + "\nSex: " + sex.value + "\nAge: " + age.value + "\nIso: " + iso.value + "\nKg: " + kg.value + "\nMon: " + Mon.value + "\nAnk: " + ank.value);
 });
 
 
