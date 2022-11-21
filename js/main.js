@@ -15,7 +15,7 @@
 
 const form = document.querySelector('form');
 var rm = document.querySelector('#form-input-rm')
-var zlb = document.querySelector('#form-input-zlb')
+var zlb = document.querySelector('#form-select-zlb')
 
 form.addEventListener('change', function() {
     form.action = "sms:0?body=RM: " + rm.value + "\nZLB: " + zlb.value;
