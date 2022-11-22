@@ -3,7 +3,7 @@
     "short_name": "RLP SMS",
     "start_url": "/?utm_source=homescreen",
     "display": "standalone",
-    "description": "Eine kleine PWA um die Kollegen die Patientenanmeldung etwas zu erleichtern. Rheinland-Pfalz und ordentliche Patienten-Anmeldung hat was von Bullshit-Bingo spielen. Digitalisierung und moderne Systeme fehlanzeige...",
+    "description": "Eine kleine PWA um dem Kollegium die Patientenanmeldung etwas zu erleichtern. Rheinland-Pfalz und ordentliche Patienten-Anmeldung hat was von Bullshit-Bingo spielen. Digitalisierung und moderne Systeme fehlanzeige...",
     "lang": "de",
     "dir": "auto",
     "theme_color": "#000000",
