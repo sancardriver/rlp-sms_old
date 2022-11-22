@@ -25,7 +25,8 @@ var iso = document.querySelector('#form-select-iso');
 var kg = document.querySelector('#form-input-kg');
 var mon = document.querySelector('#form-select-mon');
 var ank = document.querySelector('#form-input-ank');
-    form.action = "sms://&body=" + encodeURIComponent("RM: " + rm.value + "\nZLB: " + zlb.value + "\nDia: " + dia.value + "\nSex: " + sex.value + "\nAge: " + age.value + "\nIso: " + iso.value + "\nKg: " + kg.value + "\nMon: " + mon.value + "\nAnk: " + ank.value + " Uhr");
+   // form.action = "sms://&body=" + encodeURIComponent("RM: " + rm.value + "\nZLB: " + zlb.value + "\nDia: " + dia.value + "\nSex: " + sex.value + "\nAge: " + age.value + "\nIso: " + iso.value + "\nKg: " + kg.value + "\nMon: " + mon.value + "\nAnk: " + ank.value + " Uhr");
+    form.action = encodeURI("sms://&body=RM: " + rm.value + "\nZLB: " + zlb.value + "\nDia: " + dia.value + "\nSex: " + sex.value + "\nAge: " + age.value + "\nIso: " + iso.value + "\nKg: " + kg.value + "\nMon: " + mon.value + "\nAnk: " + ank.value + " Uhr");
 });
 
 
