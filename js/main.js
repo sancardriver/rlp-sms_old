@@ -43,7 +43,7 @@ form.addEventListener('change', function () {
     sms = "RM: " + rm.value + "\nZLB: " + zlb.value + "\nDia: " + dia.value + "\nSex: " + sex.value + "\nAge: " + age.value + "\nIso: " + iso.value + "\nKg: " + kg.value + "\nMon: " + mon.value + "\nAnk: " + ank.value + " Uhr";
 });
 
-var shareData = {
+const shareData = {
     text: 'test',
     title: 'test'
 }
