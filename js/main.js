@@ -43,8 +43,9 @@ form.addEventListener('change', function () {
     sms = "RM: " + rm.value + "\nZLB: " + zlb.value + "\nDia: " + dia.value + "\nSex: " + sex.value + "\nAge: " + age.value + "\nIso: " + iso.value + "\nKg: " + kg.value + "\nMon: " + mon.value + "\nAnk: " + ank.value + " Uhr";
 });
 
-const shareData = {
+var shareData = {
     text: sms,
+    title: 'test'
 }
   
   const btn = document.querySelector('.btn-success');
