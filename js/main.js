@@ -1,19 +1,19 @@
 function logText(message, isError) {
     if (isError)
-      console.error(message);
+        console.error(message);
     else
-      console.log(message);
+        console.log(message);
 
     const p = document.createElement('p');
     if (isError)
-      p.setAttribute('class', 'error');
+        p.setAttribute('class', 'error');
     document.querySelector('#output').appendChild(p);
     p.appendChild(document.createTextNode(message));
-  }
+}
 
-  function logError(message) {
+function logError(message) {
     logText(message, true);
-  }
+}
 
 function setShareButtonsEnabled(enabled) {
     document.querySelector('#share').disabled = !enabled;
@@ -50,13 +50,17 @@ function onLoad() {
 
     Array.from(forms).forEach(form => {
         form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-          form.classList.add('was-validated')
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+            if (!form.checkValidity()) {
+                webShare();
+            }
         }, false)
-      })
+    })
+
 
     //document.querySelector('#share').addEventListener('click', webShare);
 
