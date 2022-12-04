@@ -87,6 +87,12 @@
                         <label for="form-select-sex">Geschlecht</label>
                     </div>
                     <div class="input-group">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="birthswitch">
+                            <label class="form-check-label" for="birthswitch">Geburtsdatum verwenden</label>
+                        </div>
+                    </div>
+                    <div class="input-group" id="div-form-input-age">
                         <div class="form-floating">
                             <input type="number" class="form-control" id="form-input-age" inputmode="decimal"
                                 placeholder="55" required>
@@ -97,13 +103,7 @@
                         </div>
                         <span class="input-group-text">Jahre</span>
                     </div>
-                    <div class="input-group">
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="birthswitch">
-                            <label class="form-check-label" for="birthswitch">Geburtsdatum verwenden</label>
-                        </div>
-                    </div>
-                    <div class="input-group">
+                    <div class="input-group"  id="div-form-input-birth" style="display: none;">
                         <div class="form-floating">
                             <input type="date" class="form-control" id="form-input-birth" placeholder="05-12-1989">
                             <label for="form-input-birth">Geburtsdatum (optional)</label>
