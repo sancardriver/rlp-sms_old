@@ -1,3 +1,20 @@
+function logText(message, isError) {
+    if (isError)
+      console.error(message);
+    else
+      console.log(message);
+
+    const p = document.createElement('p');
+    if (isError)
+      p.setAttribute('class', 'error');
+    document.querySelector('#output').appendChild(p);
+    p.appendChild(document.createTextNode(message));
+  }
+
+  function logError(message) {
+    logText(message, true);
+  }
+
 function setShareButtonsEnabled(enabled) {
     document.querySelector('#share').disabled = !enabled;
 }
@@ -18,19 +35,30 @@ async function webShare() {
     const url = undefined;
     const files = undefined;
 
-    setShareButtonsEnabled(false);
     try {
         await navigator.share({ files, title, text, url });
         logText('Successfully sent share');
     } catch (error) {
         logError('Error sharing: ' + error);
     }
-    setShareButtonsEnabled(true);
 }
 
 
 function onLoad() {
-    document.querySelector('#share').addEventListener('click', webShare);
+
+    const forms = document.querySelectorAll('.needs-validation')
+
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+          form.classList.add('was-validated')
+        }, false)
+      })
+
+    //document.querySelector('#share').addEventListener('click', webShare);
 
     if (navigator.share === undefined) {
         setShareButtonsEnabled(false);
