@@ -43,21 +43,6 @@ async function webShare() {
     }
 }
 
-(() => {
-    'use strict'
-    const forms = document.querySelectorAll('.needs-validation')
-    Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-            }
-            form.classList.add('was-validated')
-            webShare;
-        }, false)
-    })
-})()
-
 function onLoad() {
 
     if (navigator.share === undefined) {
@@ -72,3 +57,19 @@ function onLoad() {
     }
 }
 window.addEventListener('load', onLoad);
+
+
+(() => {
+    'use strict'
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+            webShare;
+        }, false)
+    })
+})()
