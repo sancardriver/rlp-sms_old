@@ -76,8 +76,8 @@ function onLoad() {
 
 window.addEventListener('load', onLoad);
 
-
-$('#form-input-birth').datepicker("option", "onSelect", function(dateText, inst) {
+const birth = document.querySelector('#form-input-birth');
+birth.datepicker("option", "onSelect", function(dateText, inst) {
     var dob = $(this).datepicker('getDate');
     var age = GetAge(dob);
     if (age >= 16 && age < 18) {
