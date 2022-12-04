@@ -76,14 +76,8 @@ function onLoad() {
 
 window.addEventListener('load', onLoad);
 
-const birth = document.querySelector('#form-input-birth');
-birth.datepicker("option", "onSelect", function(dateText, inst) {
-    var dob = birth.datepicker('getDate');
-    var age = GetAge(dob);
-    if (age >= 16 && age < 18) {
-        alert("The minimum age requirement for supplementary card applicant is 18 years old. For applicant aged 16 and 17, and are going overseas to study, please submit the letter of acceptance from the education institution.");
-    }
-});
+
+
 
 function GetAge(birthDate) {
     var today = new Date();
@@ -94,3 +88,14 @@ function GetAge(birthDate) {
     }
     return age;
 }
+
+const birth = document.querySelector('#form-input-birth');
+
+birth.addEventListener('change', function() {
+    var dob = birth.value
+    var age = GetAge(dob);
+    if (age >= 16 && age < 18) {
+        alert("The minimum age requirement for supplementary card applicant is 18 years old. For applicant aged 16 and 17, and are going overseas to study, please submit the letter of acceptance from the education institution.");
+    }
+});
+
