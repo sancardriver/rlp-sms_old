@@ -105,10 +105,10 @@ birth.addEventListener('change', function() {
 const birthswitch = document.querySelector('#birthswitch');
 birthswitch.addEventListener('change', function() {
     if (birthswitch.checked == true){
-        document.querySelector('#div-form-input-age').style.display = "none";
-        document.querySelector('#div-form-input-birth').style.display = "block";
+        document.querySelector('#div-form-input-age').style.visibility = "hidden";
+        document.querySelector('#div-form-input-birth').style.visibility = "visible";
       } else {
-        document.querySelector('#div-form-input-age').style.display = "block";
-        document.querySelector('#div-form-input-birth').style.display = "none";
+        document.querySelector('#div-form-input-age').style.visibility = "visible";
+        document.querySelector('#div-form-input-birth').style.visibility = "hidden";
       } 
 });
