@@ -11,53 +11,53 @@
         }, false)
     })
 })()
-
-
 const form = document.querySelector('form');
 
 
-
-
-
-var rm;
-var zlb;
-var dia;
-var sex;
-var age;
-var iso;
-var kg;
-var mon;
-var ank;
-var sms;
-
-form.addEventListener('change', function () {
-    rm = document.querySelector('#form-input-rm');
-    zlb = document.querySelector('#form-select-zlb');
-    dia = document.querySelector('#form-input-dia');
-    sex = document.querySelector('#form-select-sex');
-    age = document.querySelector('#form-input-age');
-    iso = document.querySelector('#form-select-iso');
-    kg = document.querySelector('#form-input-kg');
-    mon = document.querySelector('#form-select-mon');
-    ank = document.querySelector('#form-input-ank');
-    sms = "RM: " + rm.value + "\nZLB: " + zlb.value + "\nDia: " + dia.value + "\nSex: " + sex.value + "\nAge: " + age.value + "\nIso: " + iso.value + "\nKg: " + kg.value + "\nMon: " + mon.value + "\nAnk: " + ank.value + " Uhr";
-});
-
-const shareData = {
-    text: 'test',
-    title: 'test'
+function setShareButtonsEnabled(enabled) {
+    document.querySelector('#share').disabled = !enabled;
 }
-  
-  const btn = document.querySelector('.btn-success');
-  const resultPara = document.querySelector('.result');
-  
-  // Share must be triggered by "user activation"
-  btn.addEventListener('click', async () => {
-    try {
-      await navigator.share(shareData);
-      resultPara.textContent = 'MDN shared successfully';
-    } catch (err) {
-      resultPara.textContent = `Error: ${err}`;
+
+
+async function webShare() {
+    const rm = document.querySelector('#form-input-rm');
+    const zlb = document.querySelector('#form-select-zlb');
+    const dia = document.querySelector('#form-input-dia');
+    const sex = document.querySelector('#form-select-sex');
+    const age = document.querySelector('#form-input-age');
+    const iso = document.querySelector('#form-select-iso');
+    const kg = document.querySelector('#form-input-kg');
+    const mon = document.querySelector('#form-select-mon');
+    const ank = document.querySelector('#form-input-ank');
+
+    const title = undefined;
+    const text = "RM: "+rm.value+"\nZLB: "+zlb.value+"\nDia: "+dia.value+"\nSex: "+sex.value+"\nAge: "+age.value+"\nIso: "+iso.value+"\nKg: "+kg.value+"\nMon: "+mon.value+"\nAnk: "+ank.value+" Uhr";
+    const url = undefined;
+    const files = undefined;
+
+
+    setShareButtonsEnabled(false);
+      try {
+        await navigator.share({files, title, text, url});
+        logText('Successfully sent share');
+      } catch (error) {
+        logError('Error sharing: ' + error);
+      }
+      setShareButtonsEnabled(true);
+}
+
+
+function onLoad() {
+    document.querySelector('#share').addEventListener('click', webShare);
+
+    if (navigator.share === undefined) {
+      setShareButtonsEnabled(false);
+      if (window.location.protocol === 'http:') {
+        // navigator.share() is only available in secure contexts.
+        window.location.replace(window.location.href.replace(/^http:/, 'https:'));
+      } else {
+        logError('Error: You need to use a browser that supports this draft ' +
+                 'proposal.');
+      }
     }
-  });
-  
+  }
