@@ -88,12 +88,6 @@
                     </div>
                     <div class="input-group">
                         <div class="form-floating">
-                            <input type="date" class="form-control" id="form-input-birth" placeholder="05-12-1989">
-                            <label for="form-input-birth">Geburtsdatum (optional)</label>
-                        </div>
-                    </div>
-                    <div class="input-group">
-                        <div class="form-floating">
                             <input type="number" class="form-control" id="form-input-age" inputmode="decimal"
                                 placeholder="55" required>
                             <label for="form-input-age">Alter</label>
@@ -102,6 +96,18 @@
                             </div>
                         </div>
                         <span class="input-group-text">Jahre</span>
+                    </div>
+                    <div class="input-group">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="birthswitch">
+                            <label class="form-check-label" for="birthswitch">Geburtsdatum verwenden</label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="form-floating">
+                            <input type="date" class="form-control" id="form-input-birth" placeholder="05-12-1989">
+                            <label for="form-input-birth">Geburtsdatum (optional)</label>
+                        </div>
                     </div>
                     <div class="form-floating">
                         <select class="form-select" id="form-select-iso" aria-label="Isolationspflichtig"
