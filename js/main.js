@@ -44,7 +44,7 @@ form.addEventListener('change', function () {
 });
 
 var shareData = {
-    text: sms,
+    text: 'test',
     title: 'test'
 }
   
