@@ -63,11 +63,15 @@
                     <div class="col-md">
                         <div class="form-floating">
                             <select class="form-select" id="form-select-zlb" aria-label="Auswahl treffen!"
-                                placeholder="ZLB Status">
-                                <option selected value="Grün">Grün</option>
+                                placeholder="ZLB Status" required>
+                                <option value="">Zuweisung wählen!</option>
+                                <option value="Grün">Grün</option>
                                 <option value="Zwangszuweisung">Zwangseingewiesen</option>
                             </select>
                             <label for="form-select-zlb">ZLB Status</label>
+                            <div class="invalid-feedback">
+                                Auswahl treffen
+                            </div>
                         </div>
                     </div>
                     <div class="form-floating">
