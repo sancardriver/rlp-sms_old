@@ -1,0 +1,28 @@
+{
+  "name": "rlp-sms",
+  "version": "1.0.0",
+  "description": "SMS Generator für die Anmeldung im Bereich Guido Scherer.",
+  "scripts": {
+    "scss": "node-sass -w scss/ -o css/",
+    "minify": "npx minify css/style.css > css/style.min.css && npx minify css/style-dark.css > css/style-dark.min.css && npx uglifyjs node_modules/bootstrap/dist/js/bootstrap.js js/main.js -o js/main.min.js -c -m && workbox generateSW workbox-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sancardriver/rlp-sms.git"
+  },
+  "author": "Jonathan Starck",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "bootswatch": "^5.2.2",
+    "minify": "^9.1.0",
+    "node-sass": "^8.0.0",
+    "uglify-js": "^3.17.4"
+  },
+  "bugs": {
+    "url": "https://github.com/sancardriver/rlp-sms/issues"
+  },
+  "homepage": "https://github.com/sancardriver/rlp-sms#readme",
+  "main": "index.js",
+  "keywords": []
+}
