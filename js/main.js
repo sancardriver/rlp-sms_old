@@ -1,3 +1,18 @@
+(() => {
+    'use strict'
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+            webShare;
+        }, false)
+    })
+})()
+
 function logText(message, isError) {
     if (isError)
         console.error(message);
@@ -57,19 +72,3 @@ function onLoad() {
     }
 }
 window.addEventListener('load', onLoad);
-
-
-(() => {
-    'use strict'
-    const forms = document.querySelectorAll('.needs-validation')
-    Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-            }
-            form.classList.add('was-validated')
-            webShare;
-        }, false)
-    })
-})()
