@@ -33,14 +33,17 @@
 
 <body>
     <div class="row p-5 px-1 px-sm-1 px-md-3 px-lg-5">
-        <picture>
-            <source media="(min-width:2560px)" srcset="img/logo/logo_rlp-sms_2560.png">
-            <source media="(min-width:2000px)" srcset="img/logo/logo_rlp-sms_2000.png">
-            <source media="(min-width:1500px)" srcset="img/logo/logo_rlp-sms_1500.png">
-            <source media="(min-width:1000px)" srcset="img/logo/logo_rlp-sms_1000.png">
-            <source media="(min-width:500px)" srcset="img/logo/logo_rlp-sms_500.png">
-            <img src="img/rlp-sms.png" width="100%" height="auto" alt="RLP-SMS Logo">
-        </picture>
+        <figure>
+            <picture>
+                <source media="(min-width:2560px)" srcset="img/logo/logo_rlp-sms_2560.png">
+                <source media="(min-width:2000px)" srcset="img/logo/logo_rlp-sms_2000.png">
+                <source media="(min-width:1500px)" srcset="img/logo/logo_rlp-sms_1500.png">
+                <source media="(min-width:1000px)" srcset="img/logo/logo_rlp-sms_1000.png">
+                <source media="(min-width:500px)" srcset="img/logo/logo_rlp-sms_500.png">
+                <img src="img/logo/logo_rlp-sms_1000.png" width="100%" height="auto" alt="RLP-SMS Logo">
+            </picture>
+        </figure>
+
     </div>
     <div class="container">
         <div class="row mb-5 p-5 px-1 px-sm-1 px-md-3 px-lg-5 align-items-center rounded-3 border shadow-lg">
@@ -85,8 +88,7 @@
                     </div>
                     <div class="input-group">
                         <div class="form-floating">
-                            <input type="date" class="form-control" id="form-input-birth"
-                                placeholder="05-12-1989">
+                            <input type="date" class="form-control" id="form-input-birth" placeholder="05-12-1989">
                             <label for="form-input-birth">Geburtsdatum (optional)</label>
                         </div>
                     </div>
