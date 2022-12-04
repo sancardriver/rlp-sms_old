@@ -55,9 +55,7 @@ function onLoad() {
                 event.stopPropagation()
             }
             form.classList.add('was-validated')
-            if (!form.checkValidity()) {
-                webShare();
-            }
+            webShare();
         }, false)
     })
 
