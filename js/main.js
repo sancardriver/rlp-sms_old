@@ -1,9 +1,11 @@
+
+/* Logging Funktion für Text */
+
 function logText(message, isError) {
     if (isError)
         console.error(message);
     else
         console.log(message);
-
     const p = document.createElement('p');
     if (isError)
         p.setAttribute('class', 'error');
@@ -75,9 +77,6 @@ function onLoad() {
 })()
 
 window.addEventListener('load', onLoad);
-
-
-
 
 function GetAge(birthDate) {
     var today = new Date();

@@ -45,8 +45,8 @@
         </figure>
 
     </div>
-    <div class="container">
-        <div class="row mb-5 p-5 px-1 px-sm-1 px-md-3 px-lg-5 align-items-center rounded-3 border shadow-lg">
+    <div class="row mb-5 p-5 px-1 px-sm-1 px-md-3 px-lg-5 align-items-center rounded-3 border shadow-lg">
+        <div class="container">
             <form class="form-floating needs-validation" novalidate>
                 <div class="row g-2">
                     <div class="col-md">
@@ -70,7 +70,7 @@
                             </select>
                             <label for="form-select-zlb">ZLB Status</label>
                             <div class="invalid-feedback">
-                                Auswahl treffen
+                                Bitte Auswahl treffen
                             </div>
                         </div>
                     </div>
@@ -83,12 +83,16 @@
                     </div>
                     <div class="form-floating">
                         <select class="form-select" id="form-select-sex" aria-label="Geschlecht wählen"
-                            placeholder="Geschlecht wählen">
-                            <option selected value="d">Divers</option>
+                            placeholder="Geschlecht wählen" required>
+                            <option value="" selected>Geschlecht wählen</option>
+                            <option value="d">Divers</option>
                             <option value="w">Weiblich</option>
                             <option value="m">Männlich</option>
                         </select>
                         <label for="form-select-sex">Geschlecht</label>
+                        <div class="invalid-feedback">
+                            Bitte Auswahl treffen
+                        </div>
                     </div>
                     <div class="input-group py-2">
                         <div class="form-check form-switch">
@@ -107,7 +111,7 @@
                         </div>
                         <span class="input-group-text">Jahre</span>
                     </div>
-                    <div class="input-group"  id="div-form-input-birth" style="display: none;">
+                    <div class="input-group" id="div-form-input-birth" style="display: none;">
                         <div class="form-floating">
                             <input type="date" class="form-control" id="form-input-birth" placeholder="05.12.1989">
                             <label for="form-input-birth">Geburtsdatum</label>
@@ -116,11 +120,15 @@
                     <div class="form-floating">
                         <select class="form-select" id="form-select-iso" aria-label="Isolationspflichtig"
                             placeholder="Isolationspflicht">
-                            <option selected value="Nein">Nein</option>
+                            <option value="" selected>Isolationspflichtig?</option>
+                            <option value="Nein">Nein</option>
                             <option value="Ja">Ja</option>
                             <option value="Unklar">Unklar</option>
                         </select>
                         <label for="form-select-iso">Isolationspflichtig</label>
+                        <div class="invalid-feedback">
+                            Ist der Patient isolationspflichtig?
+                        </div>
                     </div>
                     <div class="input-group">
                         <div class="form-floating">
@@ -135,11 +143,15 @@
                     </div>
                     <div class="form-floating">
                         <select class="form-select" id="form-select-mon">
-                            <option selected value="Nein">Nein</option>
+                            <option value="" selected>Monitorpflichtig?</option>
+                            <option value="Nein">Nein</option>
                             <option value="Ja">Ja</option>
                             <option value="Unklar">Unklar</option>
                         </select>
                         <label for="form-select-mon">Monitorpflichtig</label>
+                        <div class="invalid-feedback">
+                            Ist der Patient monitorpflichtig?
+                        </div>
                     </div>
                     <div class="input-group">
                         <div class="form-floating">
